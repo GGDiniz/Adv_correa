@@ -1,57 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
-@media only screen and (max-device-width: 640px){
-        #topnav {
-          position: relative;
-          background-color: #232323;
-        }
-        #topnav #myLinks {
-          display:none;
-        }
-        #topnav a.icon {
-          display: block;
-          position: absolute;
-          right: 0;
-          top: 0;
-        }
-        #tituDuv{
-          font-size: 30px;
-          margin-top: -70px;
-          margin-bottom: 20px;
-        }
-        div.c {
-          font-size: 16px;
-        }
-        #den {
-          display: none;
-        }
-        #sobre1.column {
-          width: 100%;
-        }
-        #hr {
-          display: none;
-        }
-        #pp {
-          width:100%;
-        }
-        #sobre1 > div:nth-child(2) > div > h1{
-          margin:0;
-        }
-        #aa {
-          display: none;
-        }
-        #bb {
-          width: 50%;
-        }
-        #cc {
-          width: 50%;
-        }
-        #sobre1>div:nth-child(2)>div>h1{
-          font-size: 25px;
-          margin-top: 10px;
-          margin-bottom: 10px;
-        }
-}
+
 
 .logo{
 
@@ -86,6 +35,36 @@ span:hover{
   color: #fff;
   transition: 0.5s;
 }
+
+/*ESTILIZANDO OS CARDS*/
+
+.container {
+  display: flex;
+  justify-content: center; /* Centraliza os cards horizontalmente */
+  align-items: center; /* Centraliza os cards verticalmente */
+  gap: 20px; /* Espaçamento entre os cards */
+  padding: 20px; /* Espaçamento interno da container */
+}
+
+.card {
+  width: 300px; /* largura do card */
+  background-color: #ffffff; /* cor de fundo do card */
+  border-radius: 8px; /* bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* sombra sutil */
+  padding: 20px; /* espaçamento interno */
+  text-align: center; /* centraliza o conteúdo */
+}
+
+/*ESTILIZANDO OS CARDS*/
+
+.card h2 {
+  color: #333333; /* cor do título */
+}
+
+.card p {
+  color: #666666; /* cor do texto */
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -97,7 +76,7 @@ color: #fff'
 .topnav {
   position: fixed;
   z-index:1;
-  background-color: #fff;
+  background-color: black;
   height:70px;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
@@ -214,9 +193,23 @@ color: #fff'
   height:800px;
   margin: auto;
 }
-.slideshow-container h1{
-  font-size: 5rem;
+.slideshow-container h1 {
+  font-family: 'Playfair Display', serif; /* Escolha da fonte */
+  font-size: 6rem; /* Tamanho do texto */
+  font-weight: bold; /* Peso da fonte */
+  color: white; /* Cor do texto */
+  letter-spacing: 1px; /* Espaçamento entre letras */
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* Sombra suave */
 }
+.slideshow-container p {
+  font-family: 'Playfair Display', serif; /* Escolha da fonte */
+  font-size: 6rem; /* Tamanho do texto */
+  font-weight: bold; /* Peso da fonte */
+  color: white; /* Cor do texto */
+  letter-spacing: 1px; /* Espaçamento entre letras */
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.9); /* Sombra suave */
+}
+
 
 /* imagem slides com wave */
 .custom-shape-divider-bottom-1668283969 {
@@ -272,10 +265,15 @@ color: #fff'
   margin-top: 5rem;
   font-size: 2rem;
 }
-.ss{
-  object-fit: cover;
-   opacity: 0.6;
+.ss {
+  width: 100%; /* Ajuste conforme necessário */
+  height: 400px; /* Ajuste conforme necessário */
+  background-image: url('caminho/para/sua/nova/imagem.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.5); /* Ajuste o valor de brightness conforme necessário */
 }
+
 .prev, .next {
   cursor: pointer;
   position: absolute;
@@ -587,4 +585,59 @@ h3 {
 }
 label {
   text-align: center;
+}
+
+/* RESPONSIVIDADE PARA 640PX */
+@media only screen and (max-device-width: 640px){
+  
+  #topnav {
+    position: relative;
+    background-color: #232323;
+  }
+  #topnav #myLinks {
+    display:none;
+  }
+  #topnav a.icon {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  #tituDuv{
+    font-size: 30px;
+    margin-top: -70px;
+    margin-bottom: 20px;
+  }
+  div.c {
+    font-size: 16px;
+  }
+  #den {
+    display: none;
+  }
+  #sobre1.column {
+    width: 100%;
+  }
+  #hr {
+    display: none;
+  }
+  #pp {
+    width:100%;
+  }
+  #sobre1 > div:nth-child(2) > div > h1{
+    margin:0;
+  }
+  #aa {
+    display: none;
+  }
+  #bb {
+    width: 50%;
+  }
+  #cc {
+    width: 50%;
+  }
+  #sobre1>div:nth-child(2)>div>h1{
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
 }
